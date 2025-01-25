@@ -8,19 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Jan 2025 18:05:26 +0000</lastBuildDate><atom:link href="https://l2s.pages.dev/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>First</title>
-      <link>https://l2s.pages.dev/post/first/</link>
+      <title>Leetcode 1: Is unique?</title>
+      <link>https://l2s.pages.dev/post/is_unique/</link>
       <pubDate>Sat, 25 Jan 2025 18:05:26 +0000</pubDate>
       
-      <guid>https://l2s.pages.dev/post/first/</guid>
+      <guid>https://l2s.pages.dev/post/is_unique/</guid>
       
-        <description>&lt;p&gt;This is a test&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <description>&lt;p&gt;The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don&amp;rsquo;t feel that ready. As such, I bought the &lt;em&gt;Cracking the Coding Interview&lt;/em&gt; book and I&amp;rsquo;m going to be solving every single question that is in the book. Worst case scenario, I&amp;rsquo;ll learn some new stuff, which isn&amp;rsquo;t that bad. Plus, I&amp;rsquo;ll get to refresh my Python knowledge, which is always nice.&lt;/p&gt;</description>
       
     </item>
     
