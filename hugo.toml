@@ -1,0 +1,27 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+theme = 'anatole'
+pygmentsUseClasses = true
+
+[params]
+title = "l2s"
+author = "l2s"
+description = """interview prep stuff"""
+profilePicture = "images/pfp.png"
+displayMode = "light"
+disableThemeSwitcher = true
+doNotLoadAnimations = true
+contentratio = 0.8
+customCss = ["css/syntax.css"]
+
+[[menu.main]]
+name = "Home"
+identifier = "home"
+weight = 100
+url = "/"
+
+[[menu.main]]
+name = "Posts"
+weight = 200
+identifier = "posts"
+url = "/post/"
