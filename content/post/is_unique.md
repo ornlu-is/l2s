@@ -11,7 +11,7 @@ The company I work for decided to do layoffs and fortunately I was not impacted.
 
 Okay, first exercise here we go: **implement an algorithm to determine if a string has all unique characters.**
 
-Side note: this is called a heterogram. This is fairly straightforward to solve, all I need to do is iterate over the characters in the string while keeping a ledger of the characters I've already seen. I'll also sprinkle in some nicely formatted unit tests just for good measure.
+Side note: this is called a heterogram. This is fairly straightforward to solve, all I need to do is iterate over the characters in the string while keeping a ledger of the characters I've already seen. I'll also sprinkle in some nicely formatted unit tests just for good measure. To ensure that this ledger is efficient for lookups (since we'll have to check every character against it), we use a hashmap to have constant time access.
 
 ```python
 import unittest
@@ -52,7 +52,7 @@ class TestHeterogramChecker(unittest.TestCase):
             self.assertEqual(
                 res, 
                 tc.expected, 
-                msg=f"expected {tc.expected}, but got {res} for input '{tc.input}'")
+                msg=f"[{tc.name}] expected {tc.expected}, but got {res}")
 
 
 if __name__ == "__main__":

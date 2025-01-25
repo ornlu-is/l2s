@@ -22,7 +22,7 @@
   <meta name="author" content="lmbf" />
   <meta
     name="description"
-    content="I build stuff that works"
+    content="I post here sometimes"
   />
   
   
@@ -199,7 +199,7 @@
 
     ,
         "url" : "https:\/\/l2s.pages.dev\/post\/is_unique\/",
-        "wordCount" : "276",
+        "wordCount" : "301",
         "genre" : [ 
       
       "Leetcode"
@@ -235,7 +235,7 @@
         </div>
       
       <div class="sidebar__introduction-description">
-        <p>I build stuff that works</p>
+        <p>I post here sometimes</p>
       </div>
     </div>
     <ul class="sidebar__list">
@@ -348,7 +348,7 @@
         </ul>
       <p>The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don&rsquo;t feel that ready. As such, I bought the <em>Cracking the Coding Interview</em> book and I&rsquo;m going to be solving every single question that is in the book. Worst case scenario, I&rsquo;ll learn some new stuff, which isn&rsquo;t that bad. Plus, I&rsquo;ll get to refresh my Python knowledge, which is always nice.</p>
 <p>Okay, first exercise here we go: <strong>implement an algorithm to determine if a string has all unique characters.</strong></p>
-<p>Side note: this is called a heterogram. This is fairly straightforward to solve, all I need to do is iterate over the characters in the string while keeping a ledger of the characters I&rsquo;ve already seen. I&rsquo;ll also sprinkle in some nicely formatted unit tests just for good measure.</p>
+<p>Side note: this is called a heterogram. This is fairly straightforward to solve, all I need to do is iterate over the characters in the string while keeping a ledger of the characters I&rsquo;ve already seen. I&rsquo;ll also sprinkle in some nicely formatted unit tests just for good measure. To ensure that this ledger is efficient for lookups (since we&rsquo;ll have to check every character against it), we use a hashmap to have constant time access.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">unittest</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
 </span></span><span class="line"><span class="cl">
@@ -387,7 +387,7 @@
 </span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">                <span class="n">tc</span><span class="o">.</span><span class="n">expected</span><span class="p">,</span> 
-</span></span><span class="line"><span class="cl">                <span class="n">msg</span><span class="o">=</span><span class="sa">f</span><span class="s2">&#34;expected </span><span class="si">{</span><span class="n">tc</span><span class="o">.</span><span class="n">expected</span><span class="si">}</span><span class="s2">, but got </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2"> for input &#39;</span><span class="si">{</span><span class="n">tc</span><span class="o">.</span><span class="n">input</span><span class="si">}</span><span class="s2">&#39;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">msg</span><span class="o">=</span><span class="sa">f</span><span class="s2">&#34;[</span><span class="si">{</span><span class="n">tc</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">] expected </span><span class="si">{</span><span class="n">tc</span><span class="o">.</span><span class="n">expected</span><span class="si">}</span><span class="s2">, but got </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>

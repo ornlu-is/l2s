@@ -6,7 +6,7 @@ pygmentsUseClasses = true
 [params]
 title = "lmbf"
 author = "lmbf"
-description = """I build stuff that works"""
+description = """I post here sometimes"""
 profilePicture = "images/pfp.png"
 displayMode = "light"
 disableThemeSwitcher = true
