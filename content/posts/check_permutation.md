@@ -2,9 +2,8 @@
 title: "Leetcode 2: Check permutation"
 date: 2025-01-26T12:17:34Z
 Description: ""
-Tags: []
 Categories: ["Leetcode"]
-DisableComments: false
+Author: "Lmbf"
 ---
 
 The first problem I did was pretty simple so lets see if the second one is a bit more interesting:

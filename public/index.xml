@@ -9,7 +9,7 @@
     <title>Leetcode 2: Check permutation</title>
     <link>https://ornlu-is.github.io/check_permutation/</link>
     <pubDate>Sun, 26 Jan 2025 12:17:34 &#43;0000</pubDate>
-    <author>Author</author>
+    <author>Lmbf</author>
     <guid>https://ornlu-is.github.io/check_permutation/</guid>
     <description><![CDATA[<p>The first problem I did was pretty simple so lets see if the second one is a bit more interesting:</p>
 <p><strong>Given two strings, write a method to decide if one is a permutation of the other.</strong></p>
@@ -19,7 +19,7 @@
     <title>Leetcode 1: Is unique?</title>
     <link>https://ornlu-is.github.io/is_unique/</link>
     <pubDate>Sat, 25 Jan 2025 18:05:26 &#43;0000</pubDate>
-    <author>Author</author>
+    <author>Lmbf</author>
     <guid>https://ornlu-is.github.io/is_unique/</guid>
     <description><![CDATA[<p>The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don&rsquo;t feel that ready. As such, I bought the <em>Cracking the Coding Interview</em> book and I&rsquo;m going to be solving every single question that is in the book. Worst case scenario, I&rsquo;ll learn some new stuff, which isn&rsquo;t that bad. Plus, I&rsquo;ll get to refresh my Python knowledge, which is always nice.</p>]]></description>
 </item>

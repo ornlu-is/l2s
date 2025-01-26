@@ -2,9 +2,8 @@
 title: "Leetcode 1: Is unique?"
 date: 2025-01-25T18:05:26Z
 Description: ""
-Tags: []
 Categories: ["Leetcode"]
-DisableComments: false
+Author: "Lmbf"
 ---
 
 The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don't feel that ready. As such, I bought the *Cracking the Coding Interview* book and I'm going to be solving every single question that is in the book. Worst case scenario, I'll learn some new stuff, which isn't that bad. Plus, I'll get to refresh my Python knowledge, which is always nice.
