@@ -1,22 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on </title>
-    <link>https://l2s.pages.dev/categories/</link>
-    <description>Recent content in Categories on </description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jan 2025 12:17:34 +0000</lastBuildDate><atom:link href="https://l2s.pages.dev/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Leetcode</title>
-      <link>https://l2s.pages.dev/categories/leetcode/</link>
-      <pubDate>Sun, 26 Jan 2025 12:17:34 +0000</pubDate>
-      
-      <guid>https://l2s.pages.dev/categories/leetcode/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - lmbf</title>
+        <link>https://ornlu-is.github.io/categories/</link>
+        <description>Categories - Category - lmbf</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 26 Jan 2025 12:17:34 &#43;0000</lastBuildDate><atom:link href="https://ornlu-is.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode</title>
+    <link>https://ornlu-is.github.io/categories/leetcode/</link>
+    <pubDate>Sun, 26 Jan 2025 12:17:34 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://ornlu-is.github.io/categories/leetcode/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>

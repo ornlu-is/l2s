@@ -1,35 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on </title>
-    <link>https://l2s.pages.dev/post/</link>
-    <description>Recent content in Posts on </description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jan 2025 12:17:34 +0000</lastBuildDate><atom:link href="https://l2s.pages.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <title>Posts on lmbf</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on lmbf</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Jan 2025 12:35:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Leetcode 2: Check permutation</title>
-      <link>https://l2s.pages.dev/post/check_permutation/</link>
+      <link>http://localhost:1313/post/check_permutation/</link>
       <pubDate>Sun, 26 Jan 2025 12:17:34 +0000</pubDate>
-      
-      <guid>https://l2s.pages.dev/post/check_permutation/</guid>
-      
-        <description>&lt;p&gt;The first problem I did was pretty simple so lets see if the second one is a bit more interesting:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Given two strings, write a method to decide if one is a permutation of the other.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The first thing to understand is what would classify the strings as being a permutation of one another. Sure we could generate all permutations and check them all, but that would be horribly inefficient and not particularly easier to code. For a string to be a permutation of another they both must have the same characters and they must show up in equal number. This means that all we have to do is get the frequency counts of each string and check if these match.&lt;/p&gt;</description>
-      
+      <guid>http://localhost:1313/post/check_permutation/</guid>
+      <description>&lt;p&gt;The first problem I did was pretty simple so lets see if the second one is a bit more interesting:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Given two strings, write a method to decide if one is a permutation of the other.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;The first thing to understand is what would classify the strings as being a permutation of one another. Sure we could generate all permutations and check them all, but that would be horribly inefficient and not particularly easier to code. For a string to be a permutation of another they both must have the same characters and they must show up in equal number. This means that all we have to do is get the frequency counts of each string and check if these match.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Leetcode 1: Is unique?</title>
-      <link>https://l2s.pages.dev/post/is_unique/</link>
+      <link>http://localhost:1313/post/is_unique/</link>
       <pubDate>Sat, 25 Jan 2025 18:05:26 +0000</pubDate>
-      
-      <guid>https://l2s.pages.dev/post/is_unique/</guid>
-      
-        <description>&lt;p&gt;The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don&amp;rsquo;t feel that ready. As such, I bought the &lt;em&gt;Cracking the Coding Interview&lt;/em&gt; book and I&amp;rsquo;m going to be solving every single question that is in the book. Worst case scenario, I&amp;rsquo;ll learn some new stuff, which isn&amp;rsquo;t that bad. Plus, I&amp;rsquo;ll get to refresh my Python knowledge, which is always nice.&lt;/p&gt;</description>
-      
+      <guid>http://localhost:1313/post/is_unique/</guid>
+      <description>&lt;p&gt;The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don&amp;rsquo;t feel that ready. As such, I bought the &lt;em&gt;Cracking the Coding Interview&lt;/em&gt; book and I&amp;rsquo;m going to be solving every single question that is in the book. Worst case scenario, I&amp;rsquo;ll learn some new stuff, which isn&amp;rsquo;t that bad. Plus, I&amp;rsquo;ll get to refresh my Python knowledge, which is always nice.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

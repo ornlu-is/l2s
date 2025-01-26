@@ -1,10 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on </title>
-    <link>https://l2s.pages.dev/tags/</link>
-    <description>Recent content in Tags on </description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://l2s.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - lmbf</title>
+        <link>https://ornlu-is.github.io/tags/</link>
+        <description>Tags - Tag - lmbf</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://ornlu-is.github.io/tags/" rel="self" type="application/rss+xml" /></channel>
 </rss>
