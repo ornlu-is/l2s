@@ -29,9 +29,6 @@ class HeterogramChecker():
 
 
 class TestHeterogramChecker(unittest.TestCase):
-    dataT = [('abcd'), ('s4fad'), ('')]
-    dataF = [('23ds2'), ('hb 627jh=j ()')]
-
     def test_check(self):
         @dataclass
         class TestCase:

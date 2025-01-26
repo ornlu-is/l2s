@@ -8,6 +8,19 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Jan 2025 17:54:55 +0000</lastBuildDate><atom:link href="https://l2s.pages.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Leetcode 2: Check permutation</title>
+      <link>https://l2s.pages.dev/post/check_permutation/</link>
+      <pubDate>Sun, 26 Jan 2025 12:17:34 +0000</pubDate>
+      
+      <guid>https://l2s.pages.dev/post/check_permutation/</guid>
+      
+        <description>&lt;p&gt;The first problem I did was pretty simple so lets see if the second one is a bit more interesting:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Given two strings, write a method to decide if one is a permutation of the other.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The first thing to understand is what would classify the strings as being a permutation of one another. Sure we could generate all permutations and check them all, but that would be horribly inefficient and not particularly easier to code. For a string to be a permutation of another they both must have the same characters and they must show up in equal number. This means that all we have to do is get the frequency counts of each string and check if these match.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Leetcode 1: Is unique?</title>
       <link>https://l2s.pages.dev/post/is_unique/</link>
       <pubDate>Sat, 25 Jan 2025 18:05:26 +0000</pubDate>
