@@ -3,7 +3,16 @@
         <title>Leetcode - Category - lmbf</title>
         <link>https://ornlu-is.github.io/categories/leetcode/</link>
         <description>Leetcode - Category - lmbf</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 26 Jan 2025 12:17:34 &#43;0000</lastBuildDate><atom:link href="https://ornlu-is.github.io/categories/leetcode/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 26 Jan 2025 20:17:37 &#43;0000</lastBuildDate><atom:link href="https://ornlu-is.github.io/categories/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode 3: Palindrome permutation</title>
+    <link>https://ornlu-is.github.io/palindrome_permutation/</link>
+    <pubDate>Sun, 26 Jan 2025 20:17:37 &#43;0000</pubDate>
+    <author>Lmbf</author>
+    <guid>https://ornlu-is.github.io/palindrome_permutation/</guid>
+    <description><![CDATA[<p><strong>Given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or a phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words. You can ignore casing and non-letter characters.</strong></p>
+<p>This is a nice exercise because it feels complex but is extremelly straight forward once we think about what we are being asked to do. Basically, we just want to if, if we move the letters around freely, we can get a palindrome. Rather than generate all possible permutations, we can simply notice that a palindrome, like all other words, either has an even or an odd number of characters. Moreover, if it has an even number of characters, then all characters must happen an even number of times. If it has an odd number of characters, then we can only have at most one character with odd number of occurrences.</p>]]></description>
+</item>
+<item>
     <title>Leetcode 2: Check permutation</title>
     <link>https://ornlu-is.github.io/check_permutation/</link>
     <pubDate>Sun, 26 Jan 2025 12:17:34 &#43;0000</pubDate>
