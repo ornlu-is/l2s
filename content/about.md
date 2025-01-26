@@ -3,7 +3,7 @@ title: "About"
 date: 2025-01-25T18:05:26Z
 ---
 
-Hi, I'm Luís! This is where I write about projects I've been working on, and also where I post some of my study notes, to keep everything organized and easily shareable.
+Hi, I'm Luís!
 
 ## Work
 
