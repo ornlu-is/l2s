@@ -1,7 +1,7 @@
 # Leetcode 3: Palindrome permutation
 
 
-**Given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or a phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words. You can ignore casing and non-letter characters.**
+**Problem statement**: given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or a phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words. You can ignore casing and non-letter characters.
 
 This is a nice exercise because it feels complex but is extremelly straight forward once we think about what we are being asked to do. Basically, we just want to if, if we move the letters around freely, we can get a palindrome. Rather than generate all possible permutations, we can simply notice that a palindrome, like all other words, either has an even or an odd number of characters. Moreover, if it has an even number of characters, then all characters must happen an even number of times. If it has an odd number of characters, then we can only have at most one character with odd number of occurrences.
 

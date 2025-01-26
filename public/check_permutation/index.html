@@ -16,8 +16,8 @@
         <title>Leetcode 2: Check permutation - lmbf</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://ornlu-is.github.io/check_permutation/">
   <meta property="og:site_name" content="lmbf">
   <meta property="og:title" content="Leetcode 2: Check permutation">
-  <meta property="og:description" content="The first problem I did was pretty simple so lets see if the second one is a bit more interesting:
-Given two strings, write a method to decide if one is a permutation of the other.
+  <meta property="og:description" content="The first problem I did was pretty simple so lets see if the second one is a bit more interesting.
+Problem statement: given two strings, write a method to decide if one is a permutation of the other.
 The first thing to understand is what would classify the strings as being a permutation of one another. Sure we could generate all permutations and check them all, but that would be horribly inefficient and not particularly easier to code. For a string to be a permutation of another they both must have the same characters and they must show up in equal number. This means that all we have to do is get the frequency counts of each string and check if these match.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -29,8 +29,8 @@ The first thing to understand is what would classify the strings as being a perm
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://ornlu-is.github.io/logo.png">
   <meta name="twitter:title" content="Leetcode 2: Check permutation">
-  <meta name="twitter:description" content="The first problem I did was pretty simple so lets see if the second one is a bit more interesting:
-Given two strings, write a method to decide if one is a permutation of the other.
+  <meta name="twitter:description" content="The first problem I did was pretty simple so lets see if the second one is a bit more interesting.
+Problem statement: given two strings, write a method to decide if one is a permutation of the other.
 The first thing to understand is what would classify the strings as being a permutation of one another. Sure we could generate all permutations and check them all, but that would be horribly inefficient and not particularly easier to code. For a string to be a permutation of another they both must have the same characters and they must show up in equal number. This means that all we have to do is get the frequency counts of each string and check if these match.">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -44,7 +44,7 @@ The first thing to understand is what would classify the strings as being a perm
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ornlu-is.github.io\/check_permutation\/"
-        },"genre": "posts","wordcount":  408 ,
+        },"genre": "posts","wordcount":  410 ,
         "url": "https:\/\/ornlu-is.github.io\/check_permutation\/","datePublished": "2025-01-26T12:17:34+00:00","dateModified": "2025-01-26T19:38:09+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -112,10 +112,10 @@ The first thing to understand is what would classify the strings as being a perm
                 <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Leetcode 2: Check permutation</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Lmbf</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Leetcode</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-01-26">2025-01-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;408 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-01-26">2025-01-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;410 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
-        </div><div class="content" id="content"><p>The first problem I did was pretty simple so lets see if the second one is a bit more interesting:</p>
-<p><strong>Given two strings, write a method to decide if one is a permutation of the other.</strong></p>
+        </div><div class="content" id="content"><p>The first problem I did was pretty simple so lets see if the second one is a bit more interesting.</p>
+<p><strong>Problem statement</strong>: given two strings, write a method to decide if one is a permutation of the other.</p>
 <p>The first thing to understand is what would classify the strings as being a permutation of one another. Sure we could generate all permutations and check them all, but that would be horribly inefficient and not particularly easier to code. For a string to be a permutation of another they both must have the same characters and they must show up in equal number. This means that all we have to do is get the frequency counts of each string and check if these match.</p>
 <p>For that purpose we can use a dictionary. However, since this is such a common thing, Python already provides a class designed for such situations, the <code>Counter</code>. We use it to get the frequency counts of the first string, then we use its method <code>subtract</code> to subtract the frequency counts of the second string. Now, if there are any new keys after subtracting, then the strings had different characters and are not palindromes. If the total sum on frequency counts isn&rsquo;t zero, then it means the strings have the same characters but they show up in different numbers.</p>
 <p>Putting this together into code and throwing some unit tests in there, we get the following script.</p>

@@ -8,9 +8,9 @@ toc:
   enable: false
 ---
 
-The first problem I did was pretty simple so lets see if the second one is a bit more interesting:
+The first problem I did was pretty simple so lets see if the second one is a bit more interesting.
 
-**Given two strings, write a method to decide if one is a permutation of the other.**
+**Problem statement**: given two strings, write a method to decide if one is a permutation of the other.
 
 The first thing to understand is what would classify the strings as being a permutation of one another. Sure we could generate all permutations and check them all, but that would be horribly inefficient and not particularly easier to code. For a string to be a permutation of another they both must have the same characters and they must show up in equal number. This means that all we have to do is get the frequency counts of each string and check if these match. 
 

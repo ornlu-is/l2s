@@ -9,7 +9,7 @@
     <pubDate>Sun, 26 Jan 2025 20:17:37 &#43;0000</pubDate>
     <author>Lmbf</author>
     <guid>https://ornlu-is.github.io/palindrome_permutation/</guid>
-    <description><![CDATA[<p><strong>Given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or a phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words. You can ignore casing and non-letter characters.</strong></p>
+    <description><![CDATA[<p><strong>Problem statement</strong>: given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or a phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words. You can ignore casing and non-letter characters.</p>
 <p>This is a nice exercise because it feels complex but is extremelly straight forward once we think about what we are being asked to do. Basically, we just want to if, if we move the letters around freely, we can get a palindrome. Rather than generate all possible permutations, we can simply notice that a palindrome, like all other words, either has an even or an odd number of characters. Moreover, if it has an even number of characters, then all characters must happen an even number of times. If it has an odd number of characters, then we can only have at most one character with odd number of occurrences.</p>]]></description>
 </item>
 <item>
@@ -18,8 +18,8 @@
     <pubDate>Sun, 26 Jan 2025 12:17:34 &#43;0000</pubDate>
     <author>Lmbf</author>
     <guid>https://ornlu-is.github.io/check_permutation/</guid>
-    <description><![CDATA[<p>The first problem I did was pretty simple so lets see if the second one is a bit more interesting:</p>
-<p><strong>Given two strings, write a method to decide if one is a permutation of the other.</strong></p>
+    <description><![CDATA[<p>The first problem I did was pretty simple so lets see if the second one is a bit more interesting.</p>
+<p><strong>Problem statement</strong>: given two strings, write a method to decide if one is a permutation of the other.</p>
 <p>The first thing to understand is what would classify the strings as being a permutation of one another. Sure we could generate all permutations and check them all, but that would be horribly inefficient and not particularly easier to code. For a string to be a permutation of another they both must have the same characters and they must show up in equal number. This means that all we have to do is get the frequency counts of each string and check if these match.</p>]]></description>
 </item>
 <item>
@@ -28,7 +28,7 @@
     <pubDate>Sat, 25 Jan 2025 18:05:26 &#43;0000</pubDate>
     <author>Lmbf</author>
     <guid>https://ornlu-is.github.io/is_unique/</guid>
-    <description><![CDATA[<p>The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don&rsquo;t feel that ready. As such, I bought the <em>Cracking the Coding Interview</em> book and I&rsquo;m going to be solving every single question that is in the book. Worst case scenario, I&rsquo;ll learn some new stuff, which isn&rsquo;t that bad. Plus, I&rsquo;ll get to refresh my Python knowledge, which is always nice.</p>]]></description>
+    <description><![CDATA[<p>The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don&rsquo;t feel that ready. As such, I bought the <em>Cracking the Coding Interview</em> book and I&rsquo;m going to be solving every single question that is in the book. Worst case scenario, I&rsquo;ll learn some new stuff, which isn&rsquo;t that bad. Plus, I&rsquo;ll get to refresh my Python knowledge, which is always nice. Okay, first exercise here we go!</p>]]></description>
 </item>
 </channel>
 </rss>

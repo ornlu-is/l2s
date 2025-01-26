@@ -1,9 +1,9 @@
 # Leetcode 1: Is unique?
 
 
-The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don't feel that ready. As such, I bought the *Cracking the Coding Interview* book and I'm going to be solving every single question that is in the book. Worst case scenario, I'll learn some new stuff, which isn't that bad. Plus, I'll get to refresh my Python knowledge, which is always nice.
+The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don't feel that ready. As such, I bought the *Cracking the Coding Interview* book and I'm going to be solving every single question that is in the book. Worst case scenario, I'll learn some new stuff, which isn't that bad. Plus, I'll get to refresh my Python knowledge, which is always nice. Okay, first exercise here we go!
 
-Okay, first exercise here we go: **implement an algorithm to determine if a string has all unique characters.**
+**Problem statement**: implement an algorithm to determine if a string has all unique characters.
 
 Side note: this is called a heterogram. This is fairly straightforward to solve, all I need to do is iterate over the characters in the string while keeping a ledger of the characters I've already seen. I'll also sprinkle in some nicely formatted unit tests just for good measure. To ensure that this ledger is efficient for lookups (since we'll have to check every character against it), we use a hashmap to have constant time access.
 
