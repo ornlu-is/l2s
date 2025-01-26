@@ -105,21 +105,12 @@
     <div class="search-dropdown mobile">
         <div id="search-dropdown-mobile"></div>
     </div><main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">Contents</h2>
-            <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Leetcode 1: Is unique?</h1><div class="post-meta">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Leetcode 1: Is unique?</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Lmbf</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Leetcode</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-01-25">2025-01-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;330 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  data-kept="">
-                <div class="details-summary toc-title">
-                    <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don&rsquo;t feel that ready. As such, I bought the <em>Cracking the Coding Interview</em> book and I&rsquo;m going to be solving every single question that is in the book. Worst case scenario, I&rsquo;ll learn some new stuff, which isn&rsquo;t that bad. Plus, I&rsquo;ll get to refresh my Python knowledge, which is always nice.</p>
+        </div><div class="content" id="content"><p>The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don&rsquo;t feel that ready. As such, I bought the <em>Cracking the Coding Interview</em> book and I&rsquo;m going to be solving every single question that is in the book. Worst case scenario, I&rsquo;ll learn some new stuff, which isn&rsquo;t that bad. Plus, I&rsquo;ll get to refresh my Python knowledge, which is always nice.</p>
 <p>Okay, first exercise here we go: <strong>implement an algorithm to determine if a string has all unique characters.</strong></p>
 <p>Side note: this is called a heterogram. This is fairly straightforward to solve, all I need to do is iterate over the characters in the string while keeping a ledger of the characters I&rsquo;ve already seen. I&rsquo;ll also sprinkle in some nicely formatted unit tests just for good measure. To ensure that this ledger is efficient for lookups (since we&rsquo;ll have to check every character against it), we use a hashmap to have constant time access.</p>
 <div class="highlight"><div class="chroma">

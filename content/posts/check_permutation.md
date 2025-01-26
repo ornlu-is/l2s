@@ -4,6 +4,8 @@ date: 2025-01-26T12:17:34Z
 Description: ""
 Categories: ["Leetcode"]
 Author: "Lmbf"
+toc:
+  enable: false
 ---
 
 The first problem I did was pretty simple so lets see if the second one is a bit more interesting:
