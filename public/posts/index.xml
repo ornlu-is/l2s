@@ -3,7 +3,16 @@
         <title>All Posts - lmbf</title>
         <link>https://ornlu-is.github.io/posts/</link>
         <description>All Posts | lmbf</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 26 Jan 2025 20:17:37 &#43;0000</lastBuildDate><atom:link href="https://ornlu-is.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 27 Jan 2025 10:19:12 &#43;0000</lastBuildDate><atom:link href="https://ornlu-is.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode 4: One edit away</title>
+    <link>https://ornlu-is.github.io/one_edit_away/</link>
+    <pubDate>Mon, 27 Jan 2025 10:19:12 &#43;0000</pubDate>
+    <author>Lmbf</author>
+    <guid>https://ornlu-is.github.io/one_edit_away/</guid>
+    <description><![CDATA[<p><strong>Problem statement</strong>: there are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away.</p>
+<p>This one is very easy to solve. We simply get the frequency counts of the characters in both strings and subtract them, and then count how many keys we get whose value is not zero, since that corresponds to the number of edits.</p>]]></description>
+</item>
+<item>
     <title>Leetcode 3: Palindrome permutation</title>
     <link>https://ornlu-is.github.io/palindrome_permutation/</link>
     <pubDate>Sun, 26 Jan 2025 20:17:37 &#43;0000</pubDate>
