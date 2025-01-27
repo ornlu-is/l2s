@@ -3,7 +3,16 @@
         <title>All Posts - lmbf</title>
         <link>https://ornlu-is.github.io/posts/</link>
         <description>All Posts | lmbf</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 27 Jan 2025 12:51:10 &#43;0000</lastBuildDate><atom:link href="https://ornlu-is.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 27 Jan 2025 19:48:58 &#43;0000</lastBuildDate><atom:link href="https://ornlu-is.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode 6: String rotation</title>
+    <link>https://ornlu-is.github.io/string_rotation/</link>
+    <pubDate>Mon, 27 Jan 2025 19:48:58 &#43;0000</pubDate>
+    <author>Lmbf</author>
+    <guid>https://ornlu-is.github.io/string_rotation/</guid>
+    <description><![CDATA[<p><strong>Problem statement</strong>: Assume you have a method which checks if one word is a substring of another. Given two strings, write code to check if the latter is a rotation of the former using only one call to the aforementioned method.</p>
+<p>This one is super straightforward once you know the trick. If you take the original string and concatenate it with itself, then all of the string&rsquo;s rotations will be included in the concatenation. Thus, it will then suffice to simply use the method to check if the word is a substring of another and, if it is, then it must be a rotation. Note that we must check the length because rotation preserves the length.</p>]]></description>
+</item>
+<item>
     <title>Leetcode 5: String compression</title>
     <link>https://ornlu-is.github.io/string_compression/</link>
     <pubDate>Mon, 27 Jan 2025 12:51:10 &#43;0000</pubDate>
