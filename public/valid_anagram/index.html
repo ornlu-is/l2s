@@ -13,37 +13,39 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Leetcode 3: Palindrome permutation - lmbf</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://ornlu-is.github.io/palindrome_permutation/">
+        <title>Leetcode 9: Valid anagram - lmbf</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://ornlu-is.github.io/valid_anagram/">
   <meta property="og:site_name" content="lmbf">
-  <meta property="og:title" content="Leetcode 3: Palindrome permutation">
-  <meta property="og:description" content="Problem statement: given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or a phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words. You can ignore casing and non-letter characters.
-This is a nice exercise because it feels complex but is extremelly straight forward once we think about what we are being asked to do. Basically, we just want to if, if we move the letters around freely, we can get a palindrome. Rather than generate all possible permutations, we can simply notice that a palindrome, like all other words, either has an even or an odd number of characters. Moreover, if it has an even number of characters, then all characters must happen an even number of times. If it has an odd number of characters, then we can only have at most one character with odd number of occurrences.">
+  <meta property="og:title" content="Leetcode 9: Valid anagram">
+  <meta property="og:description" content="Problem statement: given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false. An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
+Not much to say here, this is immediate using Counters, just create one for each string and compare them directly with ==.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 import unittest from collections import Counter from dataclasses import dataclass class AnagramChecker(): def check(self, s: str, t: str) -&gt; bool: return Counter(s) == Counter(t) class TestAnagramChecker(unittest.TestCase): def test_check(self): @dataclass class TestCase: name: str s: str t: str expected: bool test_cases = [ TestCase(name=&#34;not an anagram&#34;, s=&#34;racecar&#34;, t=&#34;carrace&#34;, expected=True), TestCase(name=&#34;is an anagram&#34;, s=&#34;mouse&#34;, t=&#34;house&#34;, expected=False), TestCase(name=&#34;works for empty string&#34;, s=&#34;&#34;, t=&#34;&#34;, expected=True) ] checker = AnagramChecker() for tc in test_cases: res = checker.check(tc.s, tc.t) self.assertEqual(tc.expected, res, f&#34;[{tc.name}] - expected {tc.expected} but got {res}&#34;) if __name__ == &#34;__main__&#34;: unittest.main()">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-01-26T20:17:37+00:00">
-    <meta property="article:modified_time" content="2025-01-26T20:42:37+00:00">
+    <meta property="article:published_time" content="2025-01-27T22:54:11+00:00">
+    <meta property="article:modified_time" content="2025-01-27T22:54:11+00:00">
     <meta property="og:image" content="https://ornlu-is.github.io/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://ornlu-is.github.io/logo.png">
-  <meta name="twitter:title" content="Leetcode 3: Palindrome permutation">
-  <meta name="twitter:description" content="Problem statement: given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or a phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words. You can ignore casing and non-letter characters.
-This is a nice exercise because it feels complex but is extremelly straight forward once we think about what we are being asked to do. Basically, we just want to if, if we move the letters around freely, we can get a palindrome. Rather than generate all possible permutations, we can simply notice that a palindrome, like all other words, either has an even or an odd number of characters. Moreover, if it has an even number of characters, then all characters must happen an even number of times. If it has an odd number of characters, then we can only have at most one character with odd number of occurrences.">
+  <meta name="twitter:title" content="Leetcode 9: Valid anagram">
+  <meta name="twitter:description" content="Problem statement: given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false. An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
+Not much to say here, this is immediate using Counters, just create one for each string and compare them directly with ==.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 import unittest from collections import Counter from dataclasses import dataclass class AnagramChecker(): def check(self, s: str, t: str) -&gt; bool: return Counter(s) == Counter(t) class TestAnagramChecker(unittest.TestCase): def test_check(self): @dataclass class TestCase: name: str s: str t: str expected: bool test_cases = [ TestCase(name=&#34;not an anagram&#34;, s=&#34;racecar&#34;, t=&#34;carrace&#34;, expected=True), TestCase(name=&#34;is an anagram&#34;, s=&#34;mouse&#34;, t=&#34;house&#34;, expected=False), TestCase(name=&#34;works for empty string&#34;, s=&#34;&#34;, t=&#34;&#34;, expected=True) ] checker = AnagramChecker() for tc in test_cases: res = checker.check(tc.s, tc.t) self.assertEqual(tc.expected, res, f&#34;[{tc.name}] - expected {tc.expected} but got {res}&#34;) if __name__ == &#34;__main__&#34;: unittest.main()">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ornlu-is.github.io/palindrome_permutation/" /><link rel="prev" href="https://ornlu-is.github.io/check_permutation/" /><link rel="next" href="https://ornlu-is.github.io/one_edit_away/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ornlu-is.github.io/valid_anagram/" /><link rel="prev" href="https://ornlu-is.github.io/contains_duplicate/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Leetcode 3: Palindrome permutation",
+        "headline": "Leetcode 9: Valid anagram",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/ornlu-is.github.io\/palindrome_permutation\/"
-        },"genre": "posts","wordcount":  335 ,
-        "url": "https:\/\/ornlu-is.github.io\/palindrome_permutation\/","datePublished": "2025-01-26T20:17:37+00:00","dateModified": "2025-01-26T20:42:37+00:00","publisher": {
+            "@id": "https:\/\/ornlu-is.github.io\/valid_anagram\/"
+        },"genre": "posts","wordcount":  185 ,
+        "url": "https:\/\/ornlu-is.github.io\/valid_anagram\/","datePublished": "2025-01-27T22:54:11+00:00","dateModified": "2025-01-27T22:54:11+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -107,14 +109,13 @@ This is a nice exercise because it feels complex but is extremelly straight forw
     <div class="search-dropdown mobile">
         <div id="search-dropdown-mobile"></div>
     </div><main class="main">
-                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Leetcode 3: Palindrome permutation</h1><div class="post-meta">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Leetcode 9: Valid anagram</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Lmbf</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Leetcode</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-01-26">2025-01-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;335 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
-        </div><div class="content" id="content"><p><strong>Problem statement</strong>: given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or a phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words. You can ignore casing and non-letter characters.</p>
-<p>This is a nice exercise because it feels complex but is extremelly straight forward once we think about what we are being asked to do. Basically, we just want to if, if we move the letters around freely, we can get a palindrome. Rather than generate all possible permutations, we can simply notice that a palindrome, like all other words, either has an even or an odd number of characters. Moreover, if it has an even number of characters, then all characters must happen an even number of times. If it has an odd number of characters, then we can only have at most one character with odd number of occurrences.</p>
-<p>So essentially this problem boils down to a frequency count once again. Then count how many of the counts are odd and, if this number is greater than 1, then there is no palindrome permutation. Otherwise, there is at least one palindrome permutation.</p>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-01-27">2025-01-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;185 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="content" id="content"><p><strong>Problem statement</strong>: given two strings <code>s</code> and <code>t</code>, return <code>true</code> if the two strings are anagrams of each other, otherwise return <code>false</code>. An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.</p>
+<p>Not much to say here, this is immediate using <code>Counter</code>s, just create one for each string and compare them directly with <code>==</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -154,30 +155,30 @@ This is a nice exercise because it feels complex but is extremelly straight forw
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">PalindromeChecker</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">        <span class="n">number_odd_occurrences</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">count</span><span class="o">%</span><span class="mi">2</span> <span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">counts</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">number_odd_occurrences</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="k">else</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">AnagramChecker</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">Counter</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="n">Counter</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">TestPalindromeChecker</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">TestAnagramChecker</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">test_check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">        <span class="nd">@dataclass</span>
-</span></span><span class="line"><span class="cl">        <span class="k">class</span> <span class="nc">Testcase</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">class</span> <span class="nc">TestCase</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">            <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
-</span></span><span class="line"><span class="cl">            <span class="nb">input</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">            <span class="n">s</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">            <span class="n">t</span><span class="p">:</span> <span class="nb">str</span>
 </span></span><span class="line"><span class="cl">            <span class="n">expected</span><span class="p">:</span> <span class="nb">bool</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">            <span class="n">Testcase</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;all characters are different&#34;</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="s2">&#34;asdfg&#34;</span><span class="p">,</span> <span class="n">expected</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">            <span class="n">Testcase</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;empty string&#34;</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="n">expected</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">            <span class="n">Testcase</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;ignores casing&#34;</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="s2">&#34;A1kj1Ka&#34;</span><span class="p">,</span> <span class="n">expected</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">TestCase</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;not an anagram&#34;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s2">&#34;racecar&#34;</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="s2">&#34;carrace&#34;</span><span class="p">,</span> <span class="n">expected</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">TestCase</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;is an anagram&#34;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s2">&#34;mouse&#34;</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="s2">&#34;house&#34;</span><span class="p">,</span> <span class="n">expected</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">TestCase</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;works for empty string&#34;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="n">expected</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">]</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="n">checker</span> <span class="o">=</span> <span class="n">PalindromeChecker</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">checker</span> <span class="o">=</span> <span class="n">AnagramChecker</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">tc</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="n">checker</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">tc</span><span class="o">.</span><span class="n">input</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">tc</span><span class="o">.</span><span class="n">expected</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&#34;[</span><span class="si">{</span><span class="n">tc</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">] - expected </span><span class="si">{</span><span class="n">tc</span><span class="o">.</span><span class="n">expected</span><span class="si">}</span><span class="s2">, but got </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="n">checker</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">tc</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="n">tc</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">tc</span><span class="o">.</span><span class="n">expected</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&#34;[</span><span class="si">{</span><span class="n">tc</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">] - expected </span><span class="si">{</span><span class="n">tc</span><span class="o">.</span><span class="n">expected</span><span class="si">}</span><span class="s2"> but got </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
@@ -187,7 +188,7 @@ This is a nice exercise because it feels complex but is extremelly straight forw
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2025-01-26</span>
+                <span>Updated on 2025-01-27</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
@@ -204,8 +205,7 @@ This is a nice exercise because it feels complex but is extremelly straight forw
         </section>
     </div>
 
-    <div class="post-nav"><a href="/check_permutation/" class="prev" rel="prev" title="Leetcode 2: Check permutation"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Leetcode 2: Check permutation</a>
-            <a href="/one_edit_away/" class="next" rel="next" title="Leetcode 4: One edit away">Leetcode 4: One edit away<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/contains_duplicate/" class="prev" rel="prev" title="Leetcode 8: Contains duplicate"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Leetcode 8: Contains duplicate</a></div>
 </div>
 </article></div>
             </main><footer class="footer">
