@@ -3,7 +3,16 @@
         <title>All Posts - lmbf</title>
         <link>https://ornlu-is.github.io/posts/</link>
         <description>All Posts | lmbf</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 27 Jan 2025 10:19:12 &#43;0000</lastBuildDate><atom:link href="https://ornlu-is.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 27 Jan 2025 12:51:10 &#43;0000</lastBuildDate><atom:link href="https://ornlu-is.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode 5: String compression</title>
+    <link>https://ornlu-is.github.io/string_compression/</link>
+    <pubDate>Mon, 27 Jan 2025 12:51:10 &#43;0000</pubDate>
+    <author>Lmbf</author>
+    <guid>https://ornlu-is.github.io/string_compression/</guid>
+    <description><![CDATA[<p><strong>Problem statement</strong>: Implement a method to perform basic string compression using the counts of repeated characters. For example, the string aabcccccaaa would become a2b1c5a3. If the compressed string would not become smaller than the original string, your method should return the original string. You can assume the string has only uppercase and lowercase letters.</p>
+<p>To solve this we need to iterate over each character in the string and, for each character we are currently looking at, we need to check if the previous character is the same while keeping count of how many equal characters we have already seen. Then we just need to verify if our compression is smaller than the given input and we are done.</p>]]></description>
+</item>
+<item>
     <title>Leetcode 4: One edit away</title>
     <link>https://ornlu-is.github.io/one_edit_away/</link>
     <pubDate>Mon, 27 Jan 2025 10:19:12 &#43;0000</pubDate>
