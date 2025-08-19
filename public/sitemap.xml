@@ -2,20 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://ornlu-is.github.io/categories/</loc><lastmod>2025-01-28T20:32:09&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/categories/leetcode/</loc><lastmod>2025-01-28T20:32:09&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/longest_common_prefix/</loc><lastmod>2025-01-28T20:32:09&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/posts/</loc><lastmod>2025-01-28T20:32:09&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/two_sum/</loc><lastmod>2025-01-28T19:42:27&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/valid_anagram/</loc><lastmod>2025-01-27T23:01:06&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/contains_duplicate/</loc><lastmod>2025-01-27T23:01:06&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/concatenation_of_array/</loc><lastmod>2025-01-27T23:01:06&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/string_rotation/</loc><lastmod>2025-01-27T19:55:32&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/string_compression/</loc><lastmod>2025-01-27T13:18:02&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/one_edit_away/</loc><lastmod>2025-01-27T10:45:30&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/palindrome_permutation/</loc><lastmod>2025-01-26T20:42:37&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/check_permutation/</loc><lastmod>2025-01-26T20:42:37&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/about/</loc><lastmod>2025-01-26T19:22:18&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/is_unique/</loc><lastmod>2025-01-26T20:42:37&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://ornlu-is.github.io/</loc><lastmod>2025-01-25T19:08:35&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://ornlu-is.github.io/categories/</loc><lastmod>2025-08-19T21:13:22&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://ornlu-is.github.io/posts/</loc><lastmod>2025-08-19T21:13:22&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://ornlu-is.github.io/sql_find_duplicates/</loc><lastmod>2025-08-19T21:13:22&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://ornlu-is.github.io/categories/sql-queries/</loc><lastmod>2025-08-19T21:13:22&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://ornlu-is.github.io/sql_second_highest_distinct_value/</loc><lastmod>2025-08-19T20:59:40&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://ornlu-is.github.io/records_and_pages_in_disk/</loc><lastmod>2025-08-14T20:17:37&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://ornlu-is.github.io/categories/study-notes---databases/</loc><lastmod>2025-08-14T20:17:37&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://ornlu-is.github.io/about/</loc><lastmod>2025-01-26T19:22:18&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://ornlu-is.github.io/</loc><lastmod>2025-01-25T19:08:35&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ornlu-is.github.io/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

@@ -3,12 +3,20 @@
         <title>Categories - Category - lmbf</title>
         <link>https://ornlu-is.github.io/categories/</link>
         <description>Categories - Category - lmbf</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 28 Jan 2025 20:32:09 &#43;0000</lastBuildDate><atom:link href="https://ornlu-is.github.io/categories/" rel="self" type="application/rss+xml" /><item>
-    <title>Leetcode</title>
-    <link>https://ornlu-is.github.io/categories/leetcode/</link>
-    <pubDate>Tue, 28 Jan 2025 20:32:09 &#43;0000</pubDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 19 Aug 2025 21:13:22 &#43;0100</lastBuildDate><atom:link href="https://ornlu-is.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>SQL Queries</title>
+    <link>https://ornlu-is.github.io/categories/sql-queries/</link>
+    <pubDate>Tue, 19 Aug 2025 21:13:22 &#43;0100</pubDate>
     <author>Author</author>
-    <guid>https://ornlu-is.github.io/categories/leetcode/</guid>
+    <guid>https://ornlu-is.github.io/categories/sql-queries/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Study Notes - Databases</title>
+    <link>https://ornlu-is.github.io/categories/study-notes---databases/</link>
+    <pubDate>Thu, 14 Aug 2025 20:17:37 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://ornlu-is.github.io/categories/study-notes---databases/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

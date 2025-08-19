@@ -1,0 +1,35 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>SQL - Second Highest Distinct Value - Category - lmbf</title>
+        <link>http://localhost:1313/categories/sql---second-highest-distinct-value/</link>
+        <description>SQL - Second Highest Distinct Value - Category - lmbf</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 19 Aug 2025 20:59:40 &#43;0100</lastBuildDate><atom:link href="http://localhost:1313/categories/sql---second-highest-distinct-value/" rel="self" type="application/rss+xml" /><item>
+    <title>High-level view of storing data in a database</title>
+    <link>http://localhost:1313/sql_second_highest_distinct_value/</link>
+    <pubDate>Tue, 19 Aug 2025 20:59:40 &#43;0100</pubDate>
+    <author>Lmbf</author>
+    <guid>http://localhost:1313/sql_second_highest_distinct_value/</guid>
+    <description><![CDATA[<p><strong>Problem</strong>: given a table <code>my_table</code> with an numeric column <code>col</code>, we want to return the second highest distinct value. In case there is no second highest (for example, when the table only has one row or all the rows in the table have the same value), we want to return <code>null</code>.</p>
+<p><strong>Solution</strong>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">col</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">my_table</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">col</span><span class="p">)</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">my_table</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Explanation</strong>: the subquery simply produces a temporary table with one single value, the maximum of the column <code>col</code> of table <code>my_table</code>.</p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Databases - Category - lmbf</title>
+        <link>http://localhost:1313/categories/databases/</link>
+        <description>Databases - Category - lmbf</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 14 Aug 2025 20:17:37 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/categories/databases/" rel="self" type="application/rss+xml" /><item>
+    <title>How data is mapped in a database</title>
+    <link>http://localhost:1313/records_and_pages_in_disk/</link>
+    <pubDate>Thu, 14 Aug 2025 20:17:37 &#43;0000</pubDate>
+    <author>Lmbf</author>
+    <guid>http://localhost:1313/records_and_pages_in_disk/</guid>
+    <description><![CDATA[<figure><figcaption>
+      <h4>Overview of master and worker nodes in Kubernetes</h4>
+    </figcaption>
+</figure>]]></description>
+</item>
+</channel>
+</rss>

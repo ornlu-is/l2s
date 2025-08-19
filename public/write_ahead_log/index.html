@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-G300HG9GRT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-G300HG9GRT');
+        </script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>CS186Berkeley Lecture Notes - lmbf</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/write_ahead_log/">
+  <meta property="og:site_name" content="lmbf">
+  <meta property="og:title" content="CS186Berkeley Lecture Notes">
+  <meta property="og:description" content="A database is a large, organized collection of data. Database Management System (DBMS) is software that stores, manages and facilitates access to data.
+Architecture of a DBMS Overview of master and worker nodes in Kubernetes Client and server, where SQL is typed in some client/application.
+Inside the DBMS there’s a number of modules. The first module is the Query Parsis and Optimization module whose purpose is to parse, check, verify the SQL and translate it into an efficient relational query plan.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-01-26T20:17:37+00:00">
+    <meta property="article:modified_time" content="2025-01-26T20:17:37+00:00">
+    <meta property="og:image" content="http://localhost:1313/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/logo.png">
+  <meta name="twitter:title" content="CS186Berkeley Lecture Notes">
+  <meta name="twitter:description" content="A database is a large, organized collection of data. Database Management System (DBMS) is software that stores, manages and facilitates access to data.
+Architecture of a DBMS Overview of master and worker nodes in Kubernetes Client and server, where SQL is typed in some client/application.
+Inside the DBMS there’s a number of modules. The first module is the Query Parsis and Optimization module whose purpose is to parse, check, verify the SQL and translate it into an efficient relational query plan.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/write_ahead_log/" /><link rel="prev" href="http://localhost:1313/palindrome_permutation/" /><link rel="next" href="http://localhost:1313/one_edit_away/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "CS186Berkeley Lecture Notes",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/write_ahead_log\/"
+        },"genre": "posts","wordcount":  2629 ,
+        "url": "http:\/\/localhost:1313\/write_ahead_log\/","datePublished": "2025-01-26T20:17:37+00:00","dateModified": "2025-01-26T20:17:37+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Lmbf"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="lmbf">Lmbf</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="lmbf">Lmbf</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS186Berkeley Lecture Notes</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Lmbf</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/systems-design/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Systems Design</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-01-26">2025-01-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2629 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;13 minutes&nbsp;</div>
+        </div><div class="content" id="content"><p>A database is a large, organized collection of data. Database Management System (DBMS) is software that stores, manages and facilitates access to data.</p>
+<h2 id="architecture-of-a-dbms">Architecture of a DBMS</h2>
+<figure><img src="/images/databases/records-pages-files.png"><figcaption>
+      <h4>Overview of master and worker nodes in Kubernetes</h4>
+    </figcaption>
+</figure>
+
+<p>Client and server, where SQL is typed in some client/application.</p>
+<p>Inside the DBMS there&rsquo;s a number of modules. The first module is the Query Parsis and Optimization module whose purpose is to parse, check, verify the SQL and translate it into an efficient relational query plan.</p>
+<p>The Relational Operators are the actual operators used in relational query plan. They are the individual algorithms taht are put together to execute a data flow. That data flow operates on records and files pumping data through the operatores to generate answers to your query.</p>
+<p>Then comes Files and Index Management whose purpose is to organize tables and records as groups of pages in a logical file.</p>
+<p>Then comes Buffer Management, providing the illusion that we are operating in RAM instead of disk, maps the disk to RAM.</p>
+<p>Then comes Disk Space Management transalates page requests from the buffer manager into physical bytes on one or more devices.</p>
+<p>Each layer abstracts the layer below. Some assumptions are made across these layers.</p>
+<p>There are two cross-cutting modules that are related to storage and memory management:</p>
+<ul>
+<li>Concurrency control</li>
+<li>Recovery</li>
+</ul>
+<h2 id="storage-media-hardware">Storage Media (Hardware)</h2>
+<h3 id="disks">Disks</h3>
+<p>Most database systems were originally designed for magnetic disks.</p>
+<ul>
+<li>Disk are a mechanical anachronism!</li>
+<li>Instilled design ideas that apply to using solid state disks as well</li>
+</ul>
+<p>Major implications!</p>
+<ul>
+<li>No &ldquo;pointer derefs&rdquo;. Instead, an API:
+<ul>
+<li>READ: transfer &ldquo;page&rdquo; of data from disk to RAM;</li>
+<li>WRITE: transfer &ldquo;page&rdquo; of data from RAM to disk;</li>
+</ul>
+</li>
+<li>Both API calls are very, very slow!
+<ul>
+<li>Plan carefully!</li>
+</ul>
+</li>
+<li>An explicit API can be a good thing
+<ul>
+<li>Minimizes the kind of pointer errors you see in C</li>
+</ul>
+</li>
+</ul>
+<p>A page is a fixed amount of data, like a 32Kb object. In order to do anything with the data, we need to bring the page to RAM (READ) update it in memory and WRITE it to disk. Note that these are very slow relative to CPU speeds, so we need to be conscious of how we READ/WRITE from disk.</p>
+<p>We generally think of storage as being in a hierarchy (increasing order of size but decreasing order of speed):</p>
+<ul>
+<li>Registers</li>
+<li>L1 Cache (0.5ns)</li>
+<li>L2 Cache (7.0ns)</li>
+<li>RAM - for currently used data (100ns)</li>
+<li>SSD - varies by deployment (1,000,000 ns to read 1MB sequentially)</li>
+<li>Disk - database and backup/logs, secondary and tertiary storage (20,000,000ns to read 1MB sequentially)</li>
+</ul>
+<h2 id="components-of-a-disk">Components of a Disk</h2>
+<p>A magnetic disk drive is a mechanical object made of a bunch of platters and a bunch of heads. The platters sit on a spindle that spins them all together at the same time let&rsquo;s say at about 15000 rpm. And there&rsquo;s this arm assembly that moves in and out to position the reading/writing heads on top of the desired track of the disk. The tracks under heads that are stacked on top of each other compose a cylinder. Only one head reads/writes at any one time. What they write is a multiple of what&rsquo;s called the sector size. It&rsquo;s the part of the track that intersects with one of these geometric sectors. A sector is a fixed size/amount of data and the block/page size that we transfer to and from the disk is a multiple of the sector size.</p>
+<p>To access a disk page it takes a certain amount of operations:</p>
+<ul>
+<li>seek time - moving arms to position disk head on track (2-3ms)</li>
+<li>rotational delay - waiting for block to rotate under head (0-4ms)</li>
+<li>transfer time - actually moving data to/from disk surface (0.25ms per 64KB page)</li>
+</ul>
+<p>So we want optimize for seek/rotational delays since those are the most expensive operations.</p>
+<h2 id="flash-memory-solid-state-disks">Flash memory (Solid State Disks)</h2>
+<p>Current generation is called NAND generation:</p>
+<ul>
+<li>Allows very fine reads 4-8Kb reads, but writes are coarse-grain (1-2Mb writes)</li>
+<li>For a given memory cell, after 2k-3k erasures the cell will usually fail, so we don&rsquo;t want to have hot spots on the disk, so if we have data that is frequently written, we need to move it around on the flash disk, this is called wear leveling</li>
+<li>Write amplification: big units, need to reorg for wear and garbage collection.</li>
+</ul>
+<p>Reads are fast and predictable, reading sequential data is about the same speed as random reads.</p>
+<p>Writes on the other hand are not fast. Slower for random than it is for sequential writes (4x difference).</p>
+<p>Flash can be 1-10x the bandwidth of ideal HDD, but in practice if there are non-sequential reads, we get 10-100x the bandwidth for random I/Os.</p>
+<p>Locality matters for both Flash and Hard Disks. Reading/writing to far away blocks on disk requires slow seek/rotation delay. Writing two far away blocks on SSD can require writing multiple much larger units. Ultimately, disks offer about 10x the capacity per $.</p>
+<h2 id="disk-space-management">Disk Space Management</h2>
+<p>Most DBMS store information on disks and SSDs:</p>
+<ul>
+<li>Disks are a mechanical anachronism (slow)</li>
+<li>SSDs are faster with costly writes and still slow relative to memory</li>
+</ul>
+<h3 id="block-level-storage">Block level storage</h3>
+<p>Disk drives offer and and interface to read and write large chunks of sequential bytes called a block. Blocks being sequential on a disk just means they have some order and that getting the next block is cheaper than getting a far away block.</p>
+<p>One of the things we want to do when we get a block of the disk is maximize its usage. If we&rsquo;re gonna pay to do a read or write, we want to amortize that cost, we want to make the most out of that cost because it&rsquo;s going to include the seek delay, the rotational delay and then even with SSDs the write cost is going to be high.</p>
+<p>Some of the ways we&rsquo;re going to do this is predicting feature behavior. So we&rsquo;re going to do things like keep blocks in memory if we think they&rsquo;re going to be popular, if we think they are going to be accessed a lot (caching). We might even pre-fetch blocks from the disk because we think they&rsquo;re going to be accessed soon, getting them from the disk into memory before it&rsquo;s even accessed.</p>
+<p>With writes we can buffer them. We hold them in a memory buffer and write several sequential blocks at the same time.</p>
+<h3 id="a-note-on-terminology">A note on terminology</h3>
+<ul>
+<li>Block - unit of transfer for disk read/write</li>
+<li>Page - a common synonym for &ldquo;block&rdquo;</li>
+</ul>
+<p>For the purpose of this document, block and page are synonyms. In some textbooks, page refers strictly to a block that is currently in memory.</p>
+<h3 id="arranging-blocks-on-disk">Arranging blocks on disk</h3>
+<p>When we talk about blocks on disk it&rsquo;s important to have a notion of how close they are to each other, so we&rsquo;ll define the notion of next block on disk.</p>
+<p>Sequential blocks on the same track are considered to be very close. You can think of the next block as the one that will rotate under the head. When we are done rotating over all the blocks on the same track then the blocks on the same cylinder would be the next closest (disk arm fixed, different platter). Across cylinders is the next degree of closeness.</p>
+<p>We will arrange file pages sequentially by next on disk, which minimizes seek and rotational delay.</p>
+<p>Moreover, for sequential scans, we will pre-fetch several blocks at a time (whole track or even cylinder).</p>
+<p>Disk space management module is at the very bottom of the DBMS. Its purpose is three-fold:</p>
+<ul>
+<li>Maps pages to locations on disk</li>
+<li>Loads pages from disk to memory</li>
+<li>Saves pages back to disk and ensures writes</li>
+</ul>
+<p>Higher levels of the module hierarchy (namely the buffer management module) call upon this layer to:</p>
+<ul>
+<li>read/write a page</li>
+<li>allocate/de-allocate logical pages form the disk</li>
+</ul>
+<h3 id="how-is-disk-management-implemented">How is disk management implemented</h3>
+<p>Proposal 1 - very low level where the DBMS directly communicates with the storage device, bypassing any feature of the OS. It&rsquo;s fast but what happens when the device changes? So now the software has to be ported to the new device (and you will eventually need a new device because they do not last forever).</p>
+<p>Proposal 2 - let the OS worry about the device, using its Filesystem interface:</p>
+<ul>
+<li>Allocate single large contiguous file on a nice empty disk and assume sequential/nearby byte access are fast</li>
+<li>Most FS optimize disk layout for sequential access</li>
+<li>DBMS &ldquo;file&rdquo; may span multiple FS files on multiple disks/machines</li>
+</ul>
+<p>Summary: Disk Space Management</p>
+<ul>
+<li>Provides API to read and write pages to device</li>
+<li>Page: block level organization of bytes on disk</li>
+<li>Provides &ldquo;next&rdquo; locality and abstracts FS/device details</li>
+</ul>
+<h2 id="overview-representations">Overview: Representations</h2>
+<p>Logically we have a table with rows and columns and we map that onto a file with pages and blocks. The table itself is made out of logical records and the records themselves need to be represented somehow. They are represented in memory as arrays of bytes and then those bytes are packed onto pages in memory.</p>
+<p>So the files got pages on disk and each of those pages can be brought onto memory and they contain a bunch of bytes and those bytes represent records in tables.</p>
+<p>Tables stored as logical files:</p>
+<ul>
+<li>Consist of pages
+<ul>
+<li>Pages contain a collection of records</li>
+</ul>
+</li>
+</ul>
+<p>Pages are managed:</p>
+<ul>
+<li>On disk by the disk space manager: pages read/written to physical disk/files</li>
+<li>In memory by the buffer manager: higher levels of DBMS only operate in memory</li>
+</ul>
+<h2 id="files-of-pages-of-records">Files of Pages of Records</h2>
+<ul>
+<li>DB file: a collection of pages, each containing a collection of records</li>
+<li>API for higher layers of the DBMS:
+<ul>
+<li>Insert/delete/modify record</li>
+<li>Fetch a particular record by record ID
+<ul>
+<li>Record ID is a pointer encoding pair of (page ID, location on page)</li>
+</ul>
+</li>
+<li>Scan all records
+<ul>
+<li>Possibly with some conditions on the records to be retrieved</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Could span multiple OS files and even machines
+<ul>
+<li>Or &ldquo;raw&rdquo; disk devices</li>
+</ul>
+</li>
+</ul>
+<p>Files themselves in the database can be structure in a variety of ways:</p>
+<ul>
+<li>Unordered heap files - records placed arbitrarily across pages</li>
+<li>Clustered heap files - records and pages are grouped</li>
+<li>Sorted files - pages and records are in sorted order</li>
+<li>Index files - B+ trees, linear hashing, etc. May contain records or point to records in other files</li>
+</ul>
+<h1 id="unordered-heap-files">Unordered heap files</h1>
+<ul>
+<li>Collection of records in no particular order - not to be confused with the heap data structure</li>
+<li>As file shrinks/grows, pages are (de)allocated</li>
+<li>To support record level operations, we must:
+<ul>
+<li>Keep track of the pages in a file</li>
+<li>Keep track of free space on pages</li>
+<li>Keep track of the records on a page</li>
+</ul>
+</li>
+</ul>
+<h2 id="heap-file-implemented-as-a-list">Heap file implemented as a List</h2>
+<ul>
+<li>Header page ID and heap file name stored elsewhere
+<ul>
+<li>Database catalog</li>
+</ul>
+</li>
+<li>Each page contains 2 &ldquo;pointers&rdquo; plus free space and data</li>
+<li>What is wrong with this? How do I find a page with enough space for a 20 byte records</li>
+</ul>
+<p>The header page is going to have 2 pointers:</p>
+<ul>
+<li>1 to a doubly linked list of full pages that have no more room for inserts</li>
+<li>and 1 to a doubly linked list of pages with free space</li>
+</ul>
+<p>Slow to find a page that has capacity for our insert.</p>
+<h2 id="better-usa-a-page-directory">Better: usa a page directory</h2>
+<p>Directory entries include:</p>
+<ul>
+<li>Number of free bytes on the referenced page and a pointer to that page</li>
+<li>Header pages accessed often -&gt; likely in cache</li>
+<li>Finding a page to fit a record required far fewef page loads than linked list because one header page load reveals free space on many pages</li>
+</ul>
+<p>Has multiple header pages (which compose the directory).</p>
+<h1 id="page-layout">Page Layout</h1>
+<h2 id="page-basics-the-header">Page basics: the header</h2>
+<p>We&rsquo;re gonna have a header zone in the page which is gonna have metadata about the page, information about what&rsquo;s contained on the page. May contain:</p>
+<ul>
+<li>Number of records</li>
+<li>Free space</li>
+<li>Maybe a next/last pointer</li>
+<li>Bitmaps, slot table</li>
+</ul>
+<p>Things to address in the design of a page:</p>
+<ul>
+<li>Are records all going to be of the same length? Fixed vs variable length</li>
+<li>We need to be able to find records by record ID (page, location in page). How can we make sure these are stable over time</li>
+<li>How do we add and delete records?</li>
+</ul>
+<h2 id="options-for-page-layouts">Options for page layouts</h2>
+<p>Depends on:</p>
+<ul>
+<li>record length (fixed or variable)</li>
+<li>Page packing (packed or unpacked) in terms of its free space</li>
+</ul>
+<p>Pages are nothing more than a linear array of bytes on the disk:</p>
+<ul>
+<li>1 byte per position</li>
+<li>memory addresses are ordered</li>
+<li>Disk addresses are ordered</li>
+</ul>
+<h2 id="fixed-length-records-packed-layout">Fixed length records, packed layout</h2>
+<ul>
+<li>Pack records densely after the header</li>
+<li>record ID
+<ul>
+<li>page ID, record number in page</li>
+<li>We know the offset from the start of the page (because of fixed length)</li>
+</ul>
+</li>
+<li>Easy to add: just append</li>
+<li>Deletion is a bit trickier because we have to repack the page
+<ul>
+<li>Packed implies we need to re-arrange the page</li>
+<li>Record IDs that were pointing into this page from elsewhere have to be changed because the record ID numbers changed, this can be expensive</li>
+</ul>
+</li>
+</ul>
+<h2 id="fixed-length-unpacked-layout">Fixed length, unpacked layout</h2>
+<ul>
+<li>Extra cost is to keep a bitmap in the header that has a bit for each slot on the page</li>
+<li>record ID is the page ID</li>
+<li>The slot number is the page</li>
+<li>Insert just find an empty slot</li>
+<li>Delete just clear bit</li>
+<li>No need to change the outside references</li>
+</ul>
+<h2 id="variable-length-records">Variable length records</h2>
+<ul>
+<li>How do we know where each record begins?</li>
+<li>What happens when we add and delete records?</li>
+</ul>
+<p>We are going to put the metadata in the end of the page (footer) instead of header. Next we are going to fill that footer with a somewhat different kind of metadata. We&rsquo;re gonna have what&rsquo;s called a slot directory.</p>
+<ul>
+<li>Introduce slot directory in footer
+<ul>
+<li>Pointer to free space, the place where new entries are introduced</li>
+<li>Length + pointer to beginning of record
+<ul>
+<li>slots are stored in reverse order</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Record ID = location in slot table (from the right)</li>
+<li>Delete record: set slot directory to null pointer, doesn&rsquo;t affect pointers to other records</li>
+<li>Insert a record
+<ul>
+<li>Place record in free space on page</li>
+<li>We look at where the free space pointer points</li>
+<li>Create a new entry for it in the slot table</li>
+<li>Update the free space pointer to account for the space we just used</li>
+</ul>
+</li>
+</ul>
+<p>The problem that arises is that we get free space fragmentation, we might want to consolidate it to make room for a big record. In this case we pack the page and change the pointers.</p>
+<ul>
+<li>Reorganize data on page
+<ul>
+<li>Is this safe?
+<ul>
+<li>Yes this is safe because record IDs don&rsquo;t change</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>When should I reorganize?
+<ul>
+<li>We could re-organize on delete</li>
+<li>Or wait until fragmentation blocks record addition and then reorganize</li>
+</ul>
+</li>
+</ul>
+<h1 id="record-layout">Record Layout</h1>
+<p>How to pack fields in a record.</p>
+<ul>
+<li>In a relational each record in the table has some fixed type</li>
+<li>We&rsquo;re going to assume that the system catalog stores the schema
+<ul>
+<li>no need to store type information with records (records don&rsquo;t need to be self-describing)</li>
+<li>catalog is just another table</li>
+</ul>
+</li>
+<li>Goals:
+<ul>
+<li>Records should be compact in memory &amp; disk format</li>
+<li>Fast access to fields</li>
+</ul>
+</li>
+</ul>
+<p>Easy case: fixed length fields, interesting case: variable length fields</p>
+<h2 id="record-formats-fixed-length">Record formats: fixed length</h2>
+<ul>
+<li>Field types are the same for all records in a file
+<ul>
+<li>Type info stored separately in system catalog</li>
+</ul>
+</li>
+<li>On disk byte representation is the same as in memory (no serialization)</li>
+<li>Finding the i-th field? Done via arithmetic (fast)</li>
+<li>Compact</li>
+<li>If we have nulls we will waste its space and have trouble representing it</li>
+</ul>
+<h2 id="record-formats-variable-length">Record formats: variable length</h2>
+<p>We can add padding to the fields which makes them fixed length, but it&rsquo;s a losing battle because there is always a bigger value.</p>
+<p>Another possibility is using delimiters, like commas in CSVs. The problem is that the delimiter might be an actual value in our data. To find a field it requires a scan cost.</p>
+<p>The idea is to move all variable length fields to the end of the record and we use a record header to point to the variable length fields.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-01-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/palindrome_permutation/" class="prev" rel="prev" title="Leetcode 3: Palindrome permutation"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Leetcode 3: Palindrome permutation</a>
+            <a href="/one_edit_away/" class="next" rel="next" title="Leetcode 4: One edit away">Leetcode 4: One edit away<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":200},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

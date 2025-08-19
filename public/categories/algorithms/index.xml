@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Algorithms - Category - lmbf</title>
+        <link>http://localhost:1313/categories/algorithms/</link>
+        <description>Algorithms - Category - lmbf</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 19 Apr 2025 13:46:12 &#43;0100</lastBuildDate><atom:link href="http://localhost:1313/categories/algorithms/" rel="self" type="application/rss+xml" /><item>
+    <title>Algorithms 1: Token Bucket</title>
+    <link>http://localhost:1313/token_bucket/</link>
+    <pubDate>Sat, 19 Apr 2025 13:46:12 &#43;0100</pubDate>
+    <author>Lmbf</author>
+    <guid>http://localhost:1313/token_bucket/</guid>
+    <description><![CDATA[<p>The token bucket falls into a class of algorithms usually known as rate-limiting algorithms, since they allow a server to process requests at a controlled rate. The way this algorithm works is fairly simple:</p>
+<ul>
+<li>We have a bucket that holds a maximum number of tokens and each token represents permission to perform a request;</li>
+<li>Tokens are added to the bucket at a constant rate;</li>
+<li>When a client wants to make a request, they need to take a token from the bucket. If there are no tokens available, the request will be rejected. If there are tokens available, the number of tokens is updated and the client&rsquo;s request goes through the remainder of the system.</li>
+</ul>
+<p>There are a few considerations when implementing this:</p>]]></description>
+</item>
+</channel>
+</rss>

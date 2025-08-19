@@ -1,0 +1,39 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Study Notes - Databases - Category - lmbf</title>
+        <link>https://ornlu-is.github.io/categories/study-notes---databases/</link>
+        <description>Study Notes - Databases - Category - lmbf</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 14 Aug 2025 20:17:37 &#43;0000</lastBuildDate><atom:link href="https://ornlu-is.github.io/categories/study-notes---databases/" rel="self" type="application/rss+xml" /><item>
+    <title>High-level view of storing data in a database</title>
+    <link>https://ornlu-is.github.io/records_and_pages_in_disk/</link>
+    <pubDate>Thu, 14 Aug 2025 20:17:37 &#43;0000</pubDate>
+    <author>Lmbf</author>
+    <guid>https://ornlu-is.github.io/records_and_pages_in_disk/</guid>
+    <description><![CDATA[<figure><figcaption>
+      <h4>Records, bytes, tables, pages and files</h4>
+    </figcaption>
+</figure>
+
+<ul>
+<li><strong>Record</strong> - a set of information grouped together, where the different pieces of information can have different types;</li>
+<li><strong>Byte representation of a record</strong> - how the record is actually stored in disk as bytes. Since records can have fields of different types, not all fields take up the same amount of bytes. Additionally, fields can be of fixed size, such as <code>char</code>, or of variable size, such as <code>varchar</code>. The specification of the types that compose a record is called a schema;
+<ul>
+<li>There are many ways a record can be represented in disk. For example, records can be of <strong>fixed</strong> length or of <strong>variable</strong> length and this obviously changes how we store and access them. However, the goals are always the same: records should be compact in memory/disk and there should be fast access to their fields;</li>
+</ul>
+</li>
+<li><strong>Table</strong> - a collection of records sharing a schema;</li>
+<li><strong>Page</strong> - a chunk of sequential bytes that composes a unit of transfer for disk read/write and that can hold multiple records;
+<ul>
+<li>Much like records, the way page layout is handled is also affected by whether or not the records are of fixed length. Most notably, the records in a page can be <strong>packed</strong> or <strong>unpacked</strong>, where packed refers to not having &ldquo;empty&rdquo; bytes between records in a page;</li>
+</ul>
+</li>
+<li><strong>File</strong> - a logical collection of pages that compose a table. Note that tables can span multiple files or even multiple machines;
+<ul>
+<li>Files themselves in a database can be structured in a variety of ways: unordered heap files (records placed arbitrarily across pages), clustered heap files (records and pages are grouped), sorted files (pages and records are in sorter order), index files (B+ trees, linear hashing, etc., may contain records or point to records in other files), etc.</li>
+</ul>
+</li>
+</ul>
+<p><em>Note that we&rsquo;ve used a slotted page as an example, but that is just one out of many possible ways to manage records in a page.</em></p>]]></description>
+</item>
+</channel>
+</rss>

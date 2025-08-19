@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Systems Design - Category - lmbf</title>
+        <link>http://localhost:1313/categories/systems-design/</link>
+        <description>Systems Design - Category - lmbf</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 26 Jan 2025 20:17:37 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/categories/systems-design/" rel="self" type="application/rss+xml" /><item>
+    <title>CS186Berkeley Lecture Notes</title>
+    <link>http://localhost:1313/write_ahead_log/</link>
+    <pubDate>Sun, 26 Jan 2025 20:17:37 &#43;0000</pubDate>
+    <author>Lmbf</author>
+    <guid>http://localhost:1313/write_ahead_log/</guid>
+    <description><![CDATA[<p>A database is a large, organized collection of data. Database Management System (DBMS) is software that stores, manages and facilitates access to data.</p>
+<h2 id="architecture-of-a-dbms">Architecture of a DBMS</h2>
+<figure><figcaption>
+      <h4>Overview of master and worker nodes in Kubernetes</h4>
+    </figcaption>
+</figure>
+
+<p>Client and server, where SQL is typed in some client/application.</p>
+<p>Inside the DBMS there&rsquo;s a number of modules. The first module is the Query Parsis and Optimization module whose purpose is to parse, check, verify the SQL and translate it into an efficient relational query plan.</p>]]></description>
+</item>
+</channel>
+</rss>

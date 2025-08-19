@@ -1,0 +1,57 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>SQL Queries - Category - lmbf</title>
+        <link>https://ornlu-is.github.io/categories/sql-queries/</link>
+        <description>SQL Queries - Category - lmbf</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 19 Aug 2025 21:13:22 &#43;0100</lastBuildDate><atom:link href="https://ornlu-is.github.io/categories/sql-queries/" rel="self" type="application/rss+xml" /><item>
+    <title>SQL - Find duplicates</title>
+    <link>https://ornlu-is.github.io/sql_find_duplicates/</link>
+    <pubDate>Tue, 19 Aug 2025 21:13:22 &#43;0100</pubDate>
+    <author>Lmbf</author>
+    <guid>https://ornlu-is.github.io/sql_find_duplicates/</guid>
+    <description><![CDATA[<p><strong>Problem</strong>: given a table <code>my_table</code> with two columns: <code>id</code> representing a unique identifier and constituting the table&rsquo;s primary key and <code>col1</code> being a text column, we want to write a query that finds all values of <code>col1</code> of <code>my_table</code> that have one or more duplicates.</p>
+<p><strong>Solution</strong>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">col1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">my_table</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">col1</span><span class="w"> </span><span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">col1</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Explanation</strong>: this is pretty straightforward, we simply group by <code>col1</code> which will cause us to produce a table composed uniquely of the distinct values of <code>col1</code>. By specifying <code>HAVING COUNT(col1) &gt; 1</code>, we are essentially filtering the table of distinct values of <code>col1</code> to restrict ourselves to the values that occur more than once.</p>]]></description>
+</item>
+<item>
+    <title>SQL - Second highest distinct value</title>
+    <link>https://ornlu-is.github.io/sql_second_highest_distinct_value/</link>
+    <pubDate>Tue, 19 Aug 2025 20:59:40 &#43;0100</pubDate>
+    <author>Lmbf</author>
+    <guid>https://ornlu-is.github.io/sql_second_highest_distinct_value/</guid>
+    <description><![CDATA[<p><strong>Problem</strong>: given a table <code>my_table</code> with an numeric column <code>col</code>, we want to return the second highest distinct value. In case there is no second highest (for example, when the table only has one row or all the rows in the table have the same value), we want to return <code>null</code>.</p>
+<p><strong>Solution</strong>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">col</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">my_table</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">col</span><span class="p">)</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">my_table</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Explanation</strong>: This is a nifty trick. The subquery simply produces a temporary table with one single value, the maximum of the column <code>col</code> of table <code>my_table</code>. Then we again select the maximum value of column <code>col</code> of <code>my_table</code> where the value is <strong>not</strong> in the temporary table we&rsquo;ve produced, <em>i.e.</em>, the maximum of the values that include every value except the actual maximum is the second highest value. Additionally, if there is no second highest value, there is nothing to select so we naturally produce a <code>null</code> value.</p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.142.0">
+	<meta name="generator" content="Hugo 0.142.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-G300HG9GRT"></script>
         <script>
@@ -14,27 +14,27 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>lmbf</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://ornlu-is.github.io/">
+        <title>lmbf</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="lmbf">
   <meta property="og:title" content="lmbf">
   <meta property="og:description" content="This is my cool site">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
-    <meta property="og:image" content="https://ornlu-is.github.io/logo.png">
+    <meta property="og:image" content="http://localhost:1313/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://ornlu-is.github.io/logo.png">
+  <meta name="twitter:image" content="http://localhost:1313/logo.png">
   <meta name="twitter:title" content="lmbf">
   <meta name="twitter:description" content="This is my cool site">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ornlu-is.github.io/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="lmbf">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="lmbf">
     <link rel="feed" href="/index.xml" type="application/rss+xml" title="lmbf"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "WebSite",
-        "url": "https:\/\/ornlu-is.github.io\/","inLanguage": "en","description": "This is my cool site","name": "lmbf"
+        "url": "http:\/\/localhost:1313\/","inLanguage": "en","description": "This is my cool site","name": "lmbf"
     }
     </script></head>
     <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -102,35 +102,18 @@
         alt="/images/pfp.png"
         title="/images/pfp.png" /></a></div><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/string_compression/">Leetcode 5: String compression</a>
+        <a href="/write_ahead_log/">CS186Berkeley Lecture Notes</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Lmbf</a>
-</span>&nbsp;<span class="post-publish">published on <time datetime="2025-01-27">2025-01-27</time></span>&nbsp;<span class="post-category">included in <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Leetcode</a></span></div><div class="content"><p><strong>Problem statement</strong>: Implement a method to perform basic string compression using the counts of repeated characters. For example, the string aabcccccaaa would become a2b1c5a3. If the compressed string would not become smaller than the original string, your method should return the original string. You can assume the string has only uppercase and lowercase letters.</p>
-<p>To solve this we need to iterate over each character in the string and, for each character we are currently looking at, we need to check if the previous character is the same while keeping count of how many equal characters we have already seen. Then we just need to verify if our compression is smaller than the given input and we are done.</p></div><div class="post-footer">
-        <a href="/string_compression/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/one_edit_away/">Leetcode 4: One edit away</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Lmbf</a>
-</span>&nbsp;<span class="post-publish">published on <time datetime="2025-01-27">2025-01-27</time></span>&nbsp;<span class="post-category">included in <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Leetcode</a></span></div><div class="content"><p><strong>Problem statement</strong>: there are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away.</p>
-<p>This one is very easy to solve. We simply get the frequency counts of the characters in both strings and subtract them, and then count how many keys we get whose value is not zero, since that corresponds to the number of edits.</p></div><div class="post-footer">
-        <a href="/one_edit_away/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/palindrome_permutation/">Leetcode 3: Palindrome permutation</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Lmbf</a>
-</span>&nbsp;<span class="post-publish">published on <time datetime="2025-01-26">2025-01-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Leetcode</a></span></div><div class="content"><p><strong>Problem statement</strong>: given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or a phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words. You can ignore casing and non-letter characters.</p>
-<p>This is a nice exercise because it feels complex but is extremelly straight forward once we think about what we are being asked to do. Basically, we just want to if, if we move the letters around freely, we can get a palindrome. Rather than generate all possible permutations, we can simply notice that a palindrome, like all other words, either has an even or an odd number of characters. Moreover, if it has an even number of characters, then all characters must happen an even number of times. If it has an odd number of characters, then we can only have at most one character with odd number of occurrences.</p></div><div class="post-footer">
-        <a href="/palindrome_permutation/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/check_permutation/">Leetcode 2: Check permutation</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Lmbf</a>
-</span>&nbsp;<span class="post-publish">published on <time datetime="2025-01-26">2025-01-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Leetcode</a></span></div><div class="content"><p>The first problem I did was pretty simple so lets see if the second one is a bit more interesting.</p>
-<p><strong>Problem statement</strong>: given two strings, write a method to decide if one is a permutation of the other.</p>
-<p>The first thing to understand is what would classify the strings as being a permutation of one another. Sure we could generate all permutations and check them all, but that would be horribly inefficient and not particularly easier to code. For a string to be a permutation of another they both must have the same characters and they must show up in equal number. This means that all we have to do is get the frequency counts of each string and check if these match.</p></div><div class="post-footer">
-        <a href="/check_permutation/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/is_unique/">Leetcode 1: Is unique?</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Lmbf</a>
-</span>&nbsp;<span class="post-publish">published on <time datetime="2025-01-25">2025-01-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Leetcode</a></span></div><div class="content"><p>The company I work for decided to do layoffs and fortunately I was not impacted. However, it did get me thinking on whether or not I felt ready to interview with other companies in case I had been fired. And I honestly don&rsquo;t feel that ready. As such, I bought the <em>Cracking the Coding Interview</em> book and I&rsquo;m going to be solving every single question that is in the book. Worst case scenario, I&rsquo;ll learn some new stuff, which isn&rsquo;t that bad. Plus, I&rsquo;ll get to refresh my Python knowledge, which is always nice. Okay, first exercise here we go!</p></div><div class="post-footer">
-        <a href="/is_unique/">Read More</a></div>
+</span>&nbsp;<span class="post-publish">published on <time datetime="2025-01-26">2025-01-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/systems-design/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Systems Design</a></span></div><div class="content"><p>A database is a large, organized collection of data. Database Management System (DBMS) is software that stores, manages and facilitates access to data.</p>
+<h2 id="architecture-of-a-dbms">Architecture of a DBMS</h2>
+<figure><img src="/images/databases/records-pages-files.png"><figcaption>
+      <h4>Overview of master and worker nodes in Kubernetes</h4>
+    </figcaption>
+</figure>
+
+<p>Client and server, where SQL is typed in some client/application.</p>
+<p>Inside the DBMS there&rsquo;s a number of modules. The first module is the Query Parsis and Optimization module whose purpose is to parse, check, verify the SQL and translate it into an efficient relational query plan.</p></div><div class="post-footer">
+        <a href="/write_ahead_log/">Read More</a></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
