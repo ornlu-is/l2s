@@ -13,39 +13,35 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>SQL - Compare consecutive entries - lmbf</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://ornlu-is.github.io/sql_compare_consecutive_entries/">
+        <title>Leetcode - Two pointers - lmbf</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://ornlu-is.github.io/leetcode_two_pointers/">
   <meta property="og:site_name" content="lmbf">
-  <meta property="og:title" content="SQL - Compare consecutive entries">
-  <meta property="og:description" content="Problem: given a table my_table with an id column, a date column called my_date and a numerically valued column my_value, return the IDs of the rows whose my_value value is larger than their predecessor. Assume that the table is sorted in descending order by my_date and that each entry corresponds to exactly one day.
-Solution:
-1 2 3 4 5 SELECT mt1.id FROM my_table AS mt1 JOIN my_table AS mt2 ON mt1.my_date = mt2.my_date &#43; INTERVAL &#39;1 day&#39; WHERE mt1.my_value &gt; mt2.my_value Explanation: We simply join the table on itself by the my_date column while shifting all dates by one day and then use the WHERE clause to filter for the rows we want to keep. This trick is highly localized in the sense that it requires all days to exist, otherwise it would fail.">
+  <meta property="og:title" content="Leetcode - Two pointers">
+  <meta property="og:description" content="Two pointer is a fairly common and useful technique for solving leetcode challenges. When several comparisons of pairs in an array are required, this technique tends to be a solid first approach. It boils down to keeping, as the name suggests, two pointers, either one for the first and another for the second element of the array or one for the first and another for the last element of the array.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T20:54:29+01:00">
-    <meta property="article:modified_time" content="2025-08-25T21:01:49+01:00">
+    <meta property="article:published_time" content="2025-08-25T21:05:03+01:00">
+    <meta property="article:modified_time" content="2025-08-25T21:05:03+01:00">
     <meta property="og:image" content="https://ornlu-is.github.io/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://ornlu-is.github.io/logo.png">
-  <meta name="twitter:title" content="SQL - Compare consecutive entries">
-  <meta name="twitter:description" content="Problem: given a table my_table with an id column, a date column called my_date and a numerically valued column my_value, return the IDs of the rows whose my_value value is larger than their predecessor. Assume that the table is sorted in descending order by my_date and that each entry corresponds to exactly one day.
-Solution:
-1 2 3 4 5 SELECT mt1.id FROM my_table AS mt1 JOIN my_table AS mt2 ON mt1.my_date = mt2.my_date &#43; INTERVAL &#39;1 day&#39; WHERE mt1.my_value &gt; mt2.my_value Explanation: We simply join the table on itself by the my_date column while shifting all dates by one day and then use the WHERE clause to filter for the rows we want to keep. This trick is highly localized in the sense that it requires all days to exist, otherwise it would fail.">
+  <meta name="twitter:title" content="Leetcode - Two pointers">
+  <meta name="twitter:description" content="Two pointer is a fairly common and useful technique for solving leetcode challenges. When several comparisons of pairs in an array are required, this technique tends to be a solid first approach. It boils down to keeping, as the name suggests, two pointers, either one for the first and another for the second element of the array or one for the first and another for the last element of the array.">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ornlu-is.github.io/sql_compare_consecutive_entries/" /><link rel="prev" href="https://ornlu-is.github.io/sql_find_duplicates/" /><link rel="next" href="https://ornlu-is.github.io/leetcode_two_pointers/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ornlu-is.github.io/leetcode_two_pointers/" /><link rel="prev" href="https://ornlu-is.github.io/sql_compare_consecutive_entries/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "SQL - Compare consecutive entries",
+        "headline": "Leetcode - Two pointers",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/ornlu-is.github.io\/sql_compare_consecutive_entries\/"
-        },"genre": "posts","wordcount":  135 ,
-        "url": "https:\/\/ornlu-is.github.io\/sql_compare_consecutive_entries\/","datePublished": "2025-08-25T20:54:29+01:00","dateModified": "2025-08-25T21:01:49+01:00","publisher": {
+            "@id": "https:\/\/ornlu-is.github.io\/leetcode_two_pointers\/"
+        },"genre": "posts","wordcount":  110 ,
+        "url": "https:\/\/ornlu-is.github.io\/leetcode_two_pointers\/","datePublished": "2025-08-25T21:05:03+01:00","dateModified": "2025-08-25T21:05:03+01:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -109,30 +105,13 @@ Solution:
     <div class="search-dropdown mobile">
         <div id="search-dropdown-mobile"></div>
     </div><main class="main">
-                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">SQL - Compare consecutive entries</h1><div class="post-meta">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Leetcode - Two pointers</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Lmbf</a>
-</span>&nbsp;<span class="post-category">included in <a href="/categories/sql-queries/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SQL Queries</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-08-25">2025-08-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;135 words&nbsp;
+</span>&nbsp;<span class="post-category">included in <a href="/categories/leetcode/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Leetcode</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-08-25">2025-08-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;110 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
-        </div><div class="content" id="content"><p><strong>Problem</strong>: given a table <code>my_table</code> with an <code>id</code> column, a date column called <code>my_date</code> and a numerically valued column <code>my_value</code>, return the IDs of the rows whose <code>my_value</code> value is larger than their predecessor. Assume that the table is sorted in descending order by <code>my_date</code> and that each entry corresponds to exactly one day.</p>
-<p><strong>Solution</strong>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">mt1</span><span class="p">.</span><span class="n">id</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">my_table</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">mt1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">JOIN</span><span class="w"> </span><span class="n">my_table</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">mt2</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ON</span><span class="w"> </span><span class="n">mt1</span><span class="p">.</span><span class="n">my_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mt2</span><span class="p">.</span><span class="n">my_date</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;1 day&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">mt1</span><span class="p">.</span><span class="n">my_value</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mt2</span><span class="p">.</span><span class="n">my_value</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Explanation</strong>: We simply join the table on itself by the <code>my_date</code> column while shifting all dates by one day and then use the <code>WHERE</code> clause to filter for the rows we want to keep. This trick is highly localized in the sense that it requires all days to exist, otherwise it would fail.</p>
+        </div><div class="content" id="content"><p>Two pointer is a fairly common and useful technique for solving leetcode challenges. When several comparisons of pairs in an array are required, this technique tends to be a solid first approach. It boils down to keeping, as the name suggests, two pointers, either one for the first and another for the second element of the array or one for the first and another for the last element of the array.</p>
+<p>The main selling point of this technique is that it is much more efficient than looping over arrays in the case where we know we only want to compare forward. It essentially eliminates unnecessary comparisons, which is pretty neat!</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -154,8 +133,7 @@ Solution:
         </section>
     </div>
 
-    <div class="post-nav"><a href="/sql_find_duplicates/" class="prev" rel="prev" title="SQL - Find duplicates"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>SQL - Find duplicates</a>
-            <a href="/leetcode_two_pointers/" class="next" rel="next" title="Leetcode - Two pointers">Leetcode - Two pointers<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/sql_compare_consecutive_entries/" class="prev" rel="prev" title="SQL - Compare consecutive entries"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>SQL - Compare consecutive entries</a></div>
 </div>
 </article></div>
             </main><footer class="footer">

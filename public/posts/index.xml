@@ -3,7 +3,15 @@
         <title>All Posts - lmbf</title>
         <link>https://ornlu-is.github.io/posts/</link>
         <description>All Posts | lmbf</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 25 Aug 2025 20:54:29 &#43;0100</lastBuildDate><atom:link href="https://ornlu-is.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 25 Aug 2025 21:05:03 &#43;0100</lastBuildDate><atom:link href="https://ornlu-is.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode - Two pointers</title>
+    <link>https://ornlu-is.github.io/leetcode_two_pointers/</link>
+    <pubDate>Mon, 25 Aug 2025 21:05:03 &#43;0100</pubDate>
+    <author>Lmbf</author>
+    <guid>https://ornlu-is.github.io/leetcode_two_pointers/</guid>
+    <description><![CDATA[<p>Two pointer is a fairly common and useful technique for solving leetcode challenges. When several comparisons of pairs in an array are required, this technique tends to be a solid first approach. It boils down to keeping, as the name suggests, two pointers, either one for the first and another for the second element of the array or one for the first and another for the last element of the array.</p>]]></description>
+</item>
+<item>
     <title>SQL - Compare consecutive entries</title>
     <link>https://ornlu-is.github.io/sql_compare_consecutive_entries/</link>
     <pubDate>Mon, 25 Aug 2025 20:54:29 &#43;0100</pubDate>
