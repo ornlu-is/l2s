@@ -3,7 +3,33 @@
         <title>SQL Queries - Category - lmbf</title>
         <link>https://ornlu-is.github.io/categories/sql-queries/</link>
         <description>SQL Queries - Category - lmbf</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 19 Aug 2025 21:13:22 &#43;0100</lastBuildDate><atom:link href="https://ornlu-is.github.io/categories/sql-queries/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 25 Aug 2025 20:54:29 &#43;0100</lastBuildDate><atom:link href="https://ornlu-is.github.io/categories/sql-queries/" rel="self" type="application/rss+xml" /><item>
+    <title>SQL - Compare consecutive entries</title>
+    <link>https://ornlu-is.github.io/sql_compare_consecutive_entries/</link>
+    <pubDate>Mon, 25 Aug 2025 20:54:29 &#43;0100</pubDate>
+    <author>Lmbf</author>
+    <guid>https://ornlu-is.github.io/sql_compare_consecutive_entries/</guid>
+    <description><![CDATA[<p><strong>Problem</strong>: given a table <code>my_table</code> with an <code>id</code> column, a date column called <code>my_date</code> and a numerically valued column <code>my_value</code>, return the IDs of the rows whose <code>my_value</code> value is larger than their predecessor. Assume that the table is sorted in descending order by <code>my_date</code> and that each entry corresponds to exactly one day.</p>
+<p><strong>Solution</strong>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">mt1</span><span class="p">.</span><span class="n">id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">my_table</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">mt1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">JOIN</span><span class="w"> </span><span class="n">my_table</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">mt2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ON</span><span class="w"> </span><span class="n">mt1</span><span class="p">.</span><span class="n">my_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mt2</span><span class="p">.</span><span class="n">my_date</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;1 day&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">mt1</span><span class="p">.</span><span class="n">my_value</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mt2</span><span class="p">.</span><span class="n">my_value</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Explanation</strong>: We simply join the table on itself by the <code>my_date</code> column while shifting all dates by one day and then use the <code>WHERE</code> clause to filter for the rows we want to keep. This trick is highly localized in the sense that it requires all days to exist, otherwise it would fail.</p>]]></description>
+</item>
+<item>
     <title>SQL - Find duplicates</title>
     <link>https://ornlu-is.github.io/sql_find_duplicates/</link>
     <pubDate>Tue, 19 Aug 2025 21:13:22 &#43;0100</pubDate>
